@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nepalStatsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/globalStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair_display_black_italic"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"
+                android:textAlignment="center"
+                android:text="@string/nepal_statistics"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                app:drawableStartCompat="@drawable/ic_nepal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:layout_below="@id/globalStats">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:background="@drawable/background_cases"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_cases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/cases"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="20"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/bold2"/>
+
+                    <TextView
+                        android:id="@+id/nepal_cases_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="18sp"
+                        android:layout_margin="4dp"
+                        android:fontFamily="@font/bold2"
+                        android:textColor="@color/white"
+                        android:text="@string/_40255" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/background_cases"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_recovered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/recovered"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="20"
+                        android:textColor="@color/greeen"
+                        android:fontFamily="@font/bold2"/>
+
+                    <TextView
+                        android:id="@+id/nepal_recovered_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="18sp"
+                        android:layout_margin="4dp"
+                        android:fontFamily="@font/bold2"
+                        android:textColor="@color/white"
+                        android:text="@string/_17945066" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:background="@drawable/background_cases">
+
+                    <TextView
+                        android:id="@+id/textView_deaths"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/deaths"
+                        android:shadowColor="@android:color/black"
+                        android:shadowRadius="20"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/bold2"/>
+
+                    <TextView
+                        android:id="@+id/nepal_deaths_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="18sp"
+                        android:layout_margin="4dp"
+                        android:fontFamily="@font/bold2"
+                        android:textColor="@color/white"
+                        android:text="@string/_854861" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</merge>

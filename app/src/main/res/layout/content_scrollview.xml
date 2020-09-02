@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@android:color/black"
+        android:backgroundTintMode="src_over"
+        app:cardUseCompatPadding="true"
+        android:elevation="2dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@android:color/darker_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textColor="#CD5757"
+                android:fontFamily="@font/playfair_display_black_italic"
+                android:background="@color/white"
+                android:text="Details Category"
+                android:textSize="18sp"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_nestedview"
+                android:paddingBottom="16dp"
+                android:layout_marginTop="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/provinceInfo_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="20dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/details_background"
+                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:text="@string/province_details"
+                        android:textAlignment="center"
+                        android:textColor="@color/detail_text_color"
+                        android:textSize="38sp"
+                        app:drawableEndCompat="@drawable/ic_next" />
+
+                    <TextView
+                        android:id="@+id/districtInfo_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="20dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/details_background"
+                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:text="@string/district"
+                        android:textAlignment="center"
+                        android:textColor="@color/detail_text_color"
+                        android:textSize="38sp"
+                        app:drawableEndCompat="@drawable/ic_next" />
+
+                    <TextView
+                        android:id="@+id/municipalityInfo_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="20dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/details_background"
+                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:text="@string/municipality"
+                        android:textAlignment="center"
+                        android:textColor="@color/detail_text_color"
+                        android:textSize="38sp"
+                        app:drawableEndCompat="@drawable/ic_next" />
+
+                    <TextView
+                        android:id="@+id/genderInfo_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="20dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/details_background"
+                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:text="@string/gender"
+                        android:textAlignment="center"
+                        android:textColor="@color/detail_text_color"
+                        android:textSize="38sp"
+                        app:drawableEndCompat="@drawable/ic_next" />
+
+                    <TextView
+                        android:id="@+id/ageGroup_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="20dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/details_background"
+                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:text="@string/age_group"
+                        android:textAlignment="center"
+                        android:textColor="@color/detail_text_color"
+                        android:textSize="38sp"
+                        app:drawableEndCompat="@drawable/ic_next" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</merge>
