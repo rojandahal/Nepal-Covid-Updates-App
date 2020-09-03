@@ -11,8 +11,6 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.example.covidnepal.controller.UpdateDataController;
-import com.example.covidnepal.model.NepalStats;
-import com.example.covidnepal.model.WorldStats;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
@@ -56,6 +54,8 @@ public class MainNavigationActivity extends AppCompatActivity {
                 },2000);
             }
         });
+
+        Toast.makeText(this,"Update for new Data!", Toast.LENGTH_SHORT).show();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

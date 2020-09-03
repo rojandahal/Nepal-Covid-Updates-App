@@ -23,6 +23,8 @@ public class UpdateDataController extends AppCompatActivity {
             getAllStatsData.getDistrictCases();
             getAllStatsData.getGenderCasesData();
             getAllStatsData.getAgeGroupCasesData();
+            getAllStatsData.getAllTestedData();
+            getAllStatsData.getDistrictInfoMap();
     }
 
     @Override

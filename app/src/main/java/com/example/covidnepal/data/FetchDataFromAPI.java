@@ -36,6 +36,7 @@ public class FetchDataFromAPI {
         urlObject.put("districtInfo", "https://data.nepalcorona.info/api/v1/districts");
         urlObject.put("municipalityInfo", "https://data.nepalcorona.info/api/v1/municipals");
         urlObject.put("provinceInfo", "https://data.nepalcorona.info/api/v1/covid/summary");
+        urlObject.put("nepalTestReport","https://nepalcorona.info/api/v1/data/nepal");
     }
 
     public void getWorldStats() {
@@ -96,7 +97,7 @@ public class FetchDataFromAPI {
                                     Log.d(TAG, "onNepalResponse: Total: " + response.get("total"));
                                     JSONArray currentState = response.getJSONArray("current_state");
 
-                                    nepalStats.setTotal(Integer.parseInt(String.valueOf(response.get("total"))));
+                                    nepalStats.setCases(Integer.parseInt(String.valueOf(response.get("total"))));
                                     JSONObject deathStats = currentState.getJSONObject(0);
                                     nepalStats.setDeath(Integer.parseInt(String.valueOf(deathStats.get("count"))));
 
@@ -534,7 +535,7 @@ public class FetchDataFromAPI {
     }
 
     public void getAgeGroupInfo() {
-        final Map<String, AgeGroupInfo> ageGroupInfoMap = allData.ageGroupInstance();
+        final Map<Integer, AgeGroupInfo> ageGroupInfoMap = allData.ageGroupInstance();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, urlObject.get("provinceInfo"), (JSONObject) null,
                         new Response.Listener<JSONObject>() {
@@ -554,7 +555,7 @@ public class FetchDataFromAPI {
                                         String age_group = object.getString("age");
                                         ageGroupInfo.setAgeGroup(age_group);
                                         ageGroupInfo.setCases(Integer.parseInt(String.valueOf(object.get("count"))));
-                                        ageGroupInfoMap.put(age_group,ageGroupInfo);
+                                        ageGroupInfoMap.put(i,ageGroupInfo);
                                     }
 
                                     //Active
@@ -562,9 +563,11 @@ public class FetchDataFromAPI {
                                     for(int i=0; i<ageActive.length(); i++){
                                         JSONObject object = ageActive.getJSONObject(i);
                                         String age_group = object.getString("age");
-                                        if(ageGroupInfoMap.containsKey(age_group)){
-                                            ageGroupInfoMap.get(age_group)
-                                                    .setActive(Integer.parseInt(String.valueOf(object.get("count"))));
+                                        for(int j = 0; j<ageGroupInfoMap.size(); j++) {
+                                            if (ageGroupInfoMap.get(j).getAgeGroup().contains(age_group)) {
+                                                ageGroupInfoMap.get(j)
+                                                        .setActive(Integer.parseInt(String.valueOf(object.get("count"))));
+                                            }
                                         }
                                     }
 
@@ -573,9 +576,11 @@ public class FetchDataFromAPI {
                                     for(int i=0; i<ageRecovered.length(); i++){
                                         JSONObject object = ageRecovered.getJSONObject(i);
                                         String age_group = object.getString("age");
-                                        if(ageGroupInfoMap.containsKey(age_group)){
-                                            ageGroupInfoMap.get(age_group)
-                                                    .setRecovered(Integer.parseInt(String.valueOf(object.get("count"))));
+                                        for(int j = 0; j<ageGroupInfoMap.size() ; j++) {
+                                            if (ageGroupInfoMap.get(i).getAgeGroup().contains(age_group)) {
+                                                ageGroupInfoMap.get(i)
+                                                        .setRecovered(Integer.parseInt(String.valueOf(object.get("count"))));
+                                            }
                                         }
                                     }
 
@@ -584,9 +589,11 @@ public class FetchDataFromAPI {
                                     for(int i=0; i<ageDeaths.length(); i++){
                                         JSONObject object = ageDeaths.getJSONObject(i);
                                         String age_group = object.getString("age");
-                                        if(ageGroupInfoMap.containsKey(age_group)){
-                                            ageGroupInfoMap.get(age_group)
-                                                    .setDeaths(Integer.parseInt(String.valueOf(object.get("count"))));
+                                        for(int j = 0; j<ageGroupInfoMap.size() ; j++) {
+                                            if (ageGroupInfoMap.get(i).getAgeGroup().contains(age_group)) {
+                                                ageGroupInfoMap.get(i)
+                                                        .setDeaths(Integer.parseInt(String.valueOf(object.get("count"))));
+                                            }
                                         }
                                     }
                                 } catch (JSONException e) {
@@ -604,5 +611,34 @@ public class FetchDataFromAPI {
         StatsController.getInstance().addToRequestQueue(jsonObjectRequest);
     }
 
+    public void getNepalTesting(){
+        final NepalStats nepalStats = NepalStats.getINSTANCE();
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                urlObject.get("nepalTestReport"), (JSONObject) null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            Log.d(TAG, "onResponse: " + response.get("in_isolation"));
+                            nepalStats.setTested_negative(Integer.parseInt(String.valueOf(response.get("tested_negative"))));
+                            nepalStats.setTested_total(Integer.parseInt(String.valueOf(response.get("tested_total"))));
+                            nepalStats.setTested_rdt(Integer.parseInt(String.valueOf(response.get("tested_rdt"))));
+                            nepalStats.setQuarantined(Integer.parseInt(String.valueOf(response.get("quarantined"))));
+                            nepalStats.setIn_isolation(Integer.parseInt(String.valueOf(response.get("in_isolation"))));
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        StatsController.getInstance().addToRequestQueue(jsonObjectRequest);
+
+    }
 
 }

@@ -29,7 +29,7 @@
         android:layout_gravity="bottom|end"
         android:foreground="?android:attr/selectableItemBackground"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#1162A3"
+        app:backgroundTint="@color/floating_action_tint"
         app:srcCompat="@drawable/ic_loop" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

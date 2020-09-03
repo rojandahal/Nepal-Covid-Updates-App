@@ -20,7 +20,6 @@ public class DeveloperInfoFragment extends Fragment {
 
 
 
-
         return root;
     }
 }

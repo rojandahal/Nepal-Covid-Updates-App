@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/new_rocker</item>
         <item>@font/open_sans_semibold_italic</item>
         <item>@font/playfair_display_black_italic</item>
         <item>@font/roboto_black_italic</item>

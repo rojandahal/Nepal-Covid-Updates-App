@@ -26,16 +26,12 @@ public class SecondActivity extends AppCompatActivity {
     private NepalStats nepalStats = NepalStats.getINSTANCE();
     private Map<Integer, ProvinceInfo> provinceInfoMap = allData.provinceInstance();
     private Map<String, GenderInfo> genderInfoMap = allData.genderInstance();
-    private Map<String , AgeGroupInfo> ageGroupInfoMap = allData.ageGroupInstance();
-
-    private TextView firstTextView;
+    private Map<Integer , AgeGroupInfo> ageGroupInfoMap = allData.ageGroupInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
-        firstTextView.setText("Hello World this is Rojan Dahal From Brt YO YO YO ");
         /*
         WorldStats Log
          */
@@ -53,7 +49,7 @@ public class SecondActivity extends AppCompatActivity {
         Nepal Stats Log
          */
 
-        Log.d(TAG, "onCreateNepalStats: Cases " + nepalStats.getTotal());
+        Log.d(TAG, "onCreateNepalStats: Cases " + nepalStats.getCases());
         Log.d(TAG, "onCreateNepalStats:: Active " + nepalStats.getActive());
         Log.d(TAG, "onCreateNepalStats: Recovered " + nepalStats.getRecovered());
         Log.d(TAG, "onCreateNepalStats: Deaths " + nepalStats.getDeath());
@@ -61,7 +57,7 @@ public class SecondActivity extends AppCompatActivity {
         /*
         District Info
          */
-        districtInfoIterator();
+        //districtInfoIterator();
 //        districtCheckCases(48);
 //        districtCheckCases(13);
 //        districtCheckCases(482);
@@ -84,15 +80,16 @@ public class SecondActivity extends AppCompatActivity {
         /*
         AgeGroup Iterator
          */
-        //ageGroupInfoIterator();
+        ageGroupInfoIterator();
     }
 
     private void ageGroupInfoIterator() {
-        for(Map.Entry entry: ageGroupInfoMap.entrySet()){
-            AgeGroupInfo ageGroup = ageGroupInfoMap.get(entry.getKey());
+        for(int i = 0; i<ageGroupInfoMap.size(); i++){
+            AgeGroupInfo ageGroup = ageGroupInfoMap.get(i);
             assert ageGroup != null;
-            Log.d(TAG, String.format("Gender INFO:: %s %d %d %d %d",
-                    ageGroup.getAgeGroup(), ageGroup.getCases(), ageGroup.getActive(), ageGroup.getRecovered(), ageGroup.getDeaths()));
+            Log.d(TAG, String.format("Age Group Info: %s %d %d %d %d",
+                    ageGroup.getAgeGroup(), ageGroup.getCases(),
+                    ageGroup.getActive(), ageGroup.getRecovered(), ageGroup.getDeaths()));
         }
     }
 

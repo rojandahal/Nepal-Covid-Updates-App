@@ -6,8 +6,15 @@
     <color name="yellow">#E6D432</color>
     <color name="red">#CD2222</color>
     <color name="greeen">#38D63E</color>
-    <color name="global_layout_color">#738886</color>
-    <color name="case_background">#565958</color>
+    <color name="global_layout_color">#7D738886</color>
+    <color name="global_layout_color2">#E6738886</color>
+    <color name="case_background">#E6565958</color>
     <color name="white">#ffff</color>
+    <color name="gray">#787171</color>
+    <color name="black">#000000</color>
+    <color name="lightPink">#ECE8E8</color>
+    <color name="floating_action_tint">#1162A3</color>
     <color name="detail_text_color">#2B2727</color>
+    <color name="pink">#D8A7A7</color>
+    <color name="blue">#3350EF</color>
 </resources>

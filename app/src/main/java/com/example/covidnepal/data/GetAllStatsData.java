@@ -28,7 +28,7 @@ public class GetAllStatsData {
 
     private static Map<String, GenderInfo> genderInfoMap;
 
-    private static Map<String, AgeGroupInfo> ageGroupInfoMap;
+    private static Map<Integer ,AgeGroupInfo> ageGroupInfoMap;
 
     /**
      * Getting static instance
@@ -105,7 +105,7 @@ public class GetAllStatsData {
         new FetchDataFromAPI().getGenderData();
     }
 
-    public Map<String,AgeGroupInfo> ageGroupInstance(){
+    public Map<Integer,AgeGroupInfo> ageGroupInstance(){
         if (ageGroupInfoMap == null)
             ageGroupInfoMap = new HashMap<>();
         return ageGroupInfoMap;
@@ -113,6 +113,10 @@ public class GetAllStatsData {
 
     public void getAgeGroupCasesData(){
         new FetchDataFromAPI().getAgeGroupInfo();
+    }
+
+    public void getAllTestedData(){
+        new FetchDataFromAPI().getNepalTesting();
     }
 
 }

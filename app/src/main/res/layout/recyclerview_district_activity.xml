@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:cardBackgroundColor="@color/lightPink"
+        app:cardUseCompatPadding="true"
+        android:elevation="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
+            android:layout_margin = "8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="2"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/playfair_display_bold"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/districtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="3"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/playfair_display_bold"
+                    android:text="Morang"
+                    app:drawableEndCompat="@drawable/ic_virus" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/district_cases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:shadowColor="@android:color/black"
+                android:fontFamily="@font/open_sans_semibold_italic"
+                android:text="Cases : 0"/>
+
+            <TextView
+                android:id="@+id/district_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:shadowColor="@android:color/black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/open_sans_semibold_italic"
+                android:text="Active : 0"/>
+            <TextView
+                android:id="@+id/district_recovered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:shadowColor="@android:color/black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/open_sans_semibold_italic"
+                android:text="Recovered : 0"/>
+
+            <TextView
+                android:id="@+id/district_death"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:shadowColor="@android:color/black"
+                android:fontFamily="@font/open_sans_semibold_italic"
+                android:text="Deaths : 0"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

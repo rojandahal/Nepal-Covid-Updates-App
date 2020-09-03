@@ -8,19 +8,17 @@
     tools:context=".SecondActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="8dp">
 
-        <include layout="@layout/section_worldstats_layout"/>
-
-        <include layout="@layout/section_nepalstats_layout"/>
-
-        <include layout="@layout/content_scrollview"/>
-
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="TESTING ACTIVITY"
+            android:textSize="20sp"/>
     </LinearLayout>
 
 

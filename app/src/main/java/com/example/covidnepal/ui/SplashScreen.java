@@ -14,7 +14,6 @@ import com.example.covidnepal.model.WorldStats;
 public class SplashScreen extends AppCompatActivity {
 
     private UpdateDataController updateDataController = new UpdateDataController();
-    WorldStats worldStats = WorldStats.getInstance();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

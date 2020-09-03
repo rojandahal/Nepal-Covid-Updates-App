@@ -14,6 +14,7 @@
         android:backgroundTintMode="src_over"
         app:cardUseCompatPadding="true"
         android:elevation="2dp"
+        android:foreground="?android:attr/selectableItemBackground"
         app:cardCornerRadius="4dp"
         app:cardBackgroundColor="@android:color/darker_gray">
 
@@ -37,7 +38,7 @@
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/background_nestedview"
                 android:paddingBottom="16dp"
                 android:layout_marginTop="2dp">
@@ -52,16 +53,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
-                        android:paddingStart="8dp"
+                        android:paddingStart="12dp"
                         android:paddingEnd="20dp"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:background="@drawable/details_background"
                         android:fontFamily="@font/open_sans_semibold_italic"
                         android:text="@string/province_details"
-                        android:textAlignment="center"
                         android:textColor="@color/detail_text_color"
                         android:textSize="38sp"
-                        app:drawableEndCompat="@drawable/ic_next" />
+                        app:drawableEndCompat="@drawable/ic_next"
+                        app:drawableStartCompat="@drawable/ic_info" />
 
                     <TextView
                         android:id="@+id/districtInfo_text"
@@ -74,10 +75,10 @@
                         android:background="@drawable/details_background"
                         android:fontFamily="@font/open_sans_semibold_italic"
                         android:text="@string/district"
-                        android:textAlignment="center"
                         android:textColor="@color/detail_text_color"
                         android:textSize="38sp"
-                        app:drawableEndCompat="@drawable/ic_next" />
+                        app:drawableEndCompat="@drawable/ic_next"
+                        app:drawableStartCompat="@drawable/ic_info" />
 
                     <TextView
                         android:id="@+id/municipalityInfo_text"
@@ -90,10 +91,10 @@
                         android:background="@drawable/details_background"
                         android:fontFamily="@font/open_sans_semibold_italic"
                         android:text="@string/municipality"
-                        android:textAlignment="center"
                         android:textColor="@color/detail_text_color"
                         android:textSize="38sp"
-                        app:drawableEndCompat="@drawable/ic_next" />
+                        app:drawableEndCompat="@drawable/ic_next"
+                        app:drawableStartCompat="@drawable/ic_info" />
 
                     <TextView
                         android:id="@+id/genderInfo_text"
@@ -106,10 +107,10 @@
                         android:background="@drawable/details_background"
                         android:fontFamily="@font/open_sans_semibold_italic"
                         android:text="@string/gender"
-                        android:textAlignment="center"
                         android:textColor="@color/detail_text_color"
                         android:textSize="38sp"
-                        app:drawableEndCompat="@drawable/ic_next" />
+                        app:drawableEndCompat="@drawable/ic_next"
+                        app:drawableStartCompat="@drawable/ic_info" />
 
                     <TextView
                         android:id="@+id/ageGroup_text"
@@ -122,10 +123,141 @@
                         android:background="@drawable/details_background"
                         android:fontFamily="@font/open_sans_semibold_italic"
                         android:text="@string/age_group"
-                        android:textAlignment="center"
                         android:textColor="@color/detail_text_color"
                         android:textSize="38sp"
-                        app:drawableEndCompat="@drawable/ic_next" />
+                        app:drawableEndCompat="@drawable/ic_next"
+                        app:drawableStartCompat="@drawable/ic_info" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/red"
+                            android:text="@string/covid_19_hotline_number"
+                            app:drawableStartCompat="@drawable/ic_technical_support" />
+
+                        <TextView
+                            android:id="@+id/number1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="18sp"
+                            android:text="@string/_9851_255_834"/>
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="125dp"
+                            android:layout_gravity="center"
+                            android:layout_height="2dp"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/number2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                           android:layout_margin="8dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:text="@string/_9851_255_837"/>
+
+                        <View
+                            android:id="@+id/divider2"
+                            android:layout_width="125dp"
+                            android:layout_gravity="center"
+                            android:layout_height="2dp"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/number3"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:text="@string/_9851_255_839"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:text="@string/_8am_8pm"/>
+
+                        <View
+                            android:id="@+id/divider23"
+                            android:layout_width="125dp"
+                            android:layout_gravity="center"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/number4"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:text="@string/_1115"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:text="@string/_6am_10pm"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:textColor="@color/red"
+                            android:shadowRadius="5"
+                            android:shadowColor="@color/black"
+                            android:layout_marginTop="16dp"
+                            android:textStyle="bold"
+                            android:textSize="26sp"
+                            android:text="@string/stay_safe_stay_healthy"
+                            app:drawableStartCompat="@drawable/ic_healthy_heart"
+                            app:drawableEndCompat="@drawable/ic_mask" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
 
