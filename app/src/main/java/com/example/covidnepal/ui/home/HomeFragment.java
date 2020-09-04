@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.covidnepal.R;
-import com.example.covidnepal.SecondActivity;
 import com.example.covidnepal.model.NepalStats;
 import com.example.covidnepal.model.WorldStats;
 import com.example.covidnepal.ui.agegroupinfo.AgeGroupDetails;
@@ -30,7 +28,7 @@ import java.text.NumberFormat;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    private static final String TAG = "Home Fragment";
+    //private static final String TAG = "Home Fragment";
 
     private WorldStats worldStats = WorldStats.getInstance();
     private NepalStats nepalStats = NepalStats.getINSTANCE();
@@ -112,21 +110,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.provinceInfo_text:
                 //Insert activity to display province info
-                Log.d(TAG, "onClick: Province Clicked");
+                //Log.d(TAG, "onClick: Province Clicked");
                 if(internetConnectionError())
                     break;
                 startActivity(new Intent(getActivity(), ProvinceActivityDetails.class));
                 break;
             case R.id.districtInfo_text:
                 //Activity for district info
-                Log.d(TAG, "onClick: District Clicked");
+                //Log.d(TAG, "onClick: District Clicked");
                 if(internetConnectionError())
                     break;
                 startActivity(new Intent(getActivity(), DistrictDetailsActivity.class));
                 break;
             case R.id.municipalityInfo_text:
                 //Activity for municipality info
-                Log.d(TAG, "onClick: Municipality Clicked");
+                //Log.d(TAG, "onClick: Municipality Clicked");
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setMessage("Municipality Details are currently unavailable!")
                         .setCancelable(false)
@@ -139,26 +137,26 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.genderInfo_text:
                 //Activity for gender info
-                Log.d(TAG, "onClick: Gender Clicked");
+               // Log.d(TAG, "onClick: Gender Clicked");
                 if(internetConnectionError())
                     break;
                 startActivity(new Intent(getActivity(), GenderInfoDetails.class));
                 break;
             case R.id.ageGroup_text:
                 //Activity for age group info
-                Log.d(TAG, "onClick: Age Group Clicked");
+               // Log.d(TAG, "onClick: Age Group Clicked");
                 if(internetConnectionError())
                     break;
                 startActivity(new Intent(getActivity(), AgeGroupDetails.class));
                 break;
             case R.id.worldStatsCard:
                 //Activity for world stats
-                Log.d(TAG, "onClick: World Stats Clicked");
+                //Log.d(TAG, "onClick: World Stats Clicked");
                 startActivity(new Intent(getActivity(), WorldDetailsActivity.class));
                 break;
             case R.id.nepalStatsCard:
                 //Activity for Nepal stats
-                Log.d(TAG, "onClick: Nepal Stats Clicked");
+               // Log.d(TAG, "onClick: Nepal Stats Clicked");
                 startActivity(new Intent(getActivity(), NepalDetailsActivity.class));
                 break;
 

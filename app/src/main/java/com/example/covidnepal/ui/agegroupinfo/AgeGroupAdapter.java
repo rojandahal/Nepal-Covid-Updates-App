@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class AgeGroupAdapter extends RecyclerView.Adapter<AgeGroupAdapter.ViewHolder> {
 
-    private static final String TAG = "Age Group Adapter";
+    //private static final String TAG = "Age Group Adapter";
     private Context context;
     private Map<Integer, AgeGroupInfo> ageGroupInfoMap;
     private NumberFormat nf;

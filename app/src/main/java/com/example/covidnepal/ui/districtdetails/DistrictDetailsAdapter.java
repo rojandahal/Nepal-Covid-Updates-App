@@ -31,7 +31,7 @@ public class DistrictDetailsAdapter extends RecyclerView.Adapter<DistrictDetails
     private Map<Integer,DistrictInfo> tempMap;
     private List<Integer> idList;
     private NumberFormat nf;
-    private static final String TAG = "Adapter";
+   // private static final String TAG = "Adapter";
 
     public DistrictDetailsAdapter(Context context) {
         this.context = context;

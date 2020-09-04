@@ -94,7 +94,7 @@ public class FetchDataFromAPI {
 
                                 try {
 
-                                    Log.d(TAG, "onNepalResponse: Total: " + response.get("total"));
+                                   // Log.d(TAG, "onNepalResponse: Total: " + response.get("total"));
                                     JSONArray currentState = response.getJSONArray("current_state");
 
                                     nepalStats.setCases(Integer.parseInt(String.valueOf(response.get("total"))));
@@ -620,7 +620,7 @@ public class FetchDataFromAPI {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            Log.d(TAG, "onResponse: " + response.get("in_isolation"));
+                            //Log.d(TAG, "onResponse: " + response.get("in_isolation"));
                             nepalStats.setTested_negative(Integer.parseInt(String.valueOf(response.get("tested_negative"))));
                             nepalStats.setTested_total(Integer.parseInt(String.valueOf(response.get("tested_total"))));
                             nepalStats.setTested_rdt(Integer.parseInt(String.valueOf(response.get("tested_rdt"))));

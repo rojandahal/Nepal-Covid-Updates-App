@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class DistrictDetailsActivity extends AppCompatActivity {
 
-    private static final String TAG = "District Activity";
+    //private static final String TAG = "District Activity";
 
     private DistrictDetailsAdapter adapter;
     private RecyclerView recyclerView;
@@ -39,7 +39,7 @@ public class DistrictDetailsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new DistrictDetailsAdapter(this);
         recyclerView.setAdapter(adapter);
-        Log.d(TAG, "onItemCount: " + adapter.getItemCount());
+        //Log.d(TAG, "onItemCount: " + adapter.getItemCount());
 
     }
 
