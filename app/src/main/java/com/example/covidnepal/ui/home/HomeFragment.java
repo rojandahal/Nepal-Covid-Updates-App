@@ -129,6 +129,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Log.d(TAG, "onClick: Municipality Clicked");
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setMessage("Municipality Details are currently unavailable!")
+                        .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -189,6 +190,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setMessage("District Details Unavailable! \n" +
                     "Check Internet Connection and Update Data")
+                    .setCancelable(false)
                     .setPositiveButton("OK",
                             new DialogInterface.OnClickListener() {
                                 @Override

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.example.covidnepal.controller.InternetConnection;
 import com.example.covidnepal.controller.UpdateDataController;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -46,16 +47,19 @@ public class MainNavigationActivity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        recreate();
+                        if(InternetConnection.checkConnection(MainNavigationActivity.this)){
+                            recreate();
+                            Toast.makeText(MainNavigationActivity.this, "Data Updated!", Toast.LENGTH_LONG)
+                                    .show();
+                        }
                         dialog.dismiss();
-                        Toast.makeText(MainNavigationActivity.this,"Data Updated!",Toast.LENGTH_LONG)
-                                .show();
+                        checkInternetConnection();
                     }
                 },2000);
             }
         });
 
-        Toast.makeText(this,"Update for new Data!", Toast.LENGTH_SHORT).show();
+        checkInternetConnection();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -68,6 +72,24 @@ public class MainNavigationActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+    }
+
+    private void checkInternetConnection() {
+        if(InternetConnection.checkConnection(this)) {
+            Toast.makeText(this,"Update for new Data!", Toast.LENGTH_SHORT).show();
+        }else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Please check your Internet Connection to get the latest data.")
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.dismiss();
+                        }
+                    });
+
+            AlertDialog alert = builder.create();
+            alert.show();
+        }
     }
 
     @Override

@@ -24,11 +24,12 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/new_rocker"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/nepal_covid_19_updates"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="48sp" />
+                android:textSize="44sp" />
 
         </LinearLayout>
 

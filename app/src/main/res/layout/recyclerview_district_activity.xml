@@ -71,7 +71,7 @@
                 android:textSize="26sp"
                 android:textColor="@color/black"
                 android:shadowColor="@android:color/black"
-                android:fontFamily="@font/open_sans_semibold_italic"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="Cases : 0"/>
 
             <TextView
@@ -81,7 +81,7 @@
                 android:textSize="26sp"
                 android:shadowColor="@android:color/black"
                 android:textColor="@color/black"
-                android:fontFamily="@font/open_sans_semibold_italic"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="Active : 0"/>
             <TextView
                 android:id="@+id/district_recovered"
@@ -90,7 +90,7 @@
                 android:textSize="26sp"
                 android:shadowColor="@android:color/black"
                 android:textColor="@color/black"
-                android:fontFamily="@font/open_sans_semibold_italic"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="Recovered : 0"/>
 
             <TextView
@@ -100,7 +100,7 @@
                 android:textSize="26sp"
                 android:textColor="@color/black"
                 android:shadowColor="@android:color/black"
-                android:fontFamily="@font/open_sans_semibold_italic"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="Deaths : 0"/>
 
         </LinearLayout>

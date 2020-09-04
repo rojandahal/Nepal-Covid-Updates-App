@@ -147,4 +147,14 @@
     <string name="_1115">1115</string>
     <string name="_6am_10pm">(6am-10pm)</string>
     <string name="stay_safe_stay_healthy">Stay Safe Stay Healthy</string>
+    <string name="rojan_dahal">Rojan Dahal</string>
+    <string name="_detail_intro">I am an Engineering aspirant and an enthusiast.
+        I want to learn Android development, Cloud Computing, AI, Web Development.
+        I am interested in Java, Python, Javascript, C and C++.</string>
+    <string name="mr_dahalrojan_gmail_com">mr.dahalrojan@gmail.com</string>
+    <string name="contact_info">Contact Info:</string>
+    <string name="fb_id">https://www.facebook.com/rojan.dahal.50</string>
+    <string name="insta_link">https://www.instagram.com/rozan_dahal_</string>
+    <string name="twitter_link">https://twitter.com/rose_n_dahal</string>
+    <string name="github_link">https://github.com/rojandahal</string>
 </resources>

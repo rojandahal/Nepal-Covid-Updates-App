@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:fontFamily="@font/open_sans_semibold_italic"
+                    android:fontFamily="@font/open_sans_semibold"
                     android:shadowColor="@color/pink"
                     android:shadowRadius="5"
                     android:text="@string/tests_done"
@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:fontFamily="@font/open_sans_semibold_italic"
+                    android:fontFamily="@font/open_sans_semibold"
                     android:shadowColor="@color/pink"
                     android:shadowRadius="5"
                     android:text="@string/affected_countries"
@@ -133,7 +133,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:fontFamily="@font/open_sans_semibold"
                         android:shadowColor="@android:color/black"
                         android:shadowRadius="10"
                         android:text="@string/cases"
@@ -178,7 +178,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:fontFamily="@font/open_sans_semibold"
                         android:shadowColor="@android:color/black"
                         android:shadowRadius="10"
                         android:text="@string/active"
@@ -235,7 +235,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:fontFamily="@font/open_sans_semibold"
                         android:shadowColor="@android:color/black"
                         android:shadowRadius="10"
                         android:text="@string/recovered"
@@ -280,7 +280,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:fontFamily="@font/open_sans_semibold"
                         android:shadowColor="@android:color/black"
                         android:shadowRadius="10"
                         android:text="@string/deaths"
@@ -335,7 +335,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/yellow"
                     android:textStyle="bold"
-                    android:fontFamily="@font/open_sans_semibold_italic"/>
+                    android:fontFamily="@font/open_sans_semibold"/>
 
                 <TextView
                     android:id="@+id/world_todayCases_number"
@@ -380,7 +380,7 @@
                     android:shadowRadius="10"
                     android:textColor="@color/greeen"
                     android:textStyle="bold"
-                    android:fontFamily="@font/open_sans_semibold_italic"/>
+                    android:fontFamily="@font/open_sans_semibold"/>
 
                 <TextView
                     android:id="@+id/world_todayRecovered_number"
@@ -425,7 +425,7 @@
                     android:shadowRadius="5"
                     android:textColor="@color/red"
                     android:textStyle="bold"
-                    android:fontFamily="@font/open_sans_semibold_italic"/>
+                    android:fontFamily="@font/open_sans_semibold"/>
 
                 <TextView
                     android:id="@+id/world_todayDeaths_number"
@@ -470,7 +470,7 @@
                     android:shadowRadius="5"
                     android:textColor="@color/red"
                     android:textStyle="bold"
-                    android:fontFamily="@font/open_sans_semibold_italic"/>
+                    android:fontFamily="@font/open_sans_semibold"/>
 
                 <TextView
                     android:id="@+id/world_critical_number"

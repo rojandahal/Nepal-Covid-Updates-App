@@ -9,10 +9,11 @@
     tools:context=".ui.developerinfo.DeveloperInfoFragment">
 
         <LinearLayout
+            android:id="@+id/photoLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_margin="32dp"
+            android:layout_margin="16dp"
             android:orientation="vertical">
 
                 <com.mikhaellopez.circularimageview.CircularImageView
@@ -24,7 +25,107 @@
                     app:civ_shadow="true"
                     app:civ_shadow_radius="10dp"
                     app:civ_shadow_color="#3f51b5"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/photoLinear"
+            android:text="@string/rojan_dahal"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_black_italic"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView3"
+            android:text="@string/_detail_intro"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/playfair_display_bold"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView4"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/contact_info"
+            android:textSize="22sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/open_sans_semibold"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView5"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/mr_dahalrojan_gmail_com"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#323232"
+            android:fontFamily="@font/playfair_display_black_italic"/>
+
+        <LinearLayout
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:layout_below="@id/textView6"
+            android:paddingEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_facebook"
+                    android:padding="8dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/insta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_instagram_sketched"
+                    android:padding="8dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_twitter"
+                    android:padding="8dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_github"
+                    android:padding="8dp"
+                    />
 
         </LinearLayout>
+
+
+
+
 
 </RelativeLayout>

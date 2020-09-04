@@ -26,7 +26,7 @@
                 android:id="@+id/provinceName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/playfair_display_black_italic"
+                android:fontFamily="@font/open_sans_semibold"
                 android:padding="4dp"
                 android:layout_marginStart="8dp"
                 android:textAlignment="center"
